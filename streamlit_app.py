@@ -13,15 +13,16 @@ second = st.number_input("Enter Second Number:")
 # third number
 third = st.number_input("Enter Third Number:")
 
-# compare status value
-if(second > first):
-	if(third > second):
+if(st.button('Calculate the Greatest')):
+	# compare status value
+	if(second > first):
+		if(third > second):
+			Max=third
+		else:
+			Max=second
+	elif (third > first):
 		Max=third
 	else:
-		Max=second
-elif (third > first):
-	Max=third
-else:
-	Max=first	
-	
-st.success("The greatest of the numbers is {}.".format(Max))
+		Max=first	
+
+	st.success("The greatest of the numbers is {}.".format(Max))
